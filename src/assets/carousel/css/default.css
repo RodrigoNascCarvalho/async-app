@@ -1,0 +1,103 @@
+[data-component-id='${id}'] {
+    width: 100%;
+    min-height: 130px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+@keyframes loadSlide {
+    from {
+        opacity: 0;
+        display: none;
+    }
+}
+
+[data-component-id='${id}'] .carousel-slide {
+    display: none;
+    animation: loadSlide 500ms ease-in-out;
+}
+
+[data-component-id='${id}'] .arrow {
+    top: 50%;
+    position: absolute;
+    border: solid black;
+    background: transparent;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    outline: 0;
+}
+
+[data-component-id='${id}'] .arrow:hover {
+    border: solid lightgray;
+    border-width: 0 10px 10px 0;
+}
+
+[data-component-id='${id}'] .right {
+    right: 10px;
+    transform: rotate(-45deg) translate(0, -50%);
+    -webkit-transform: rotate(-45deg) translate(0, -50%);
+}
+
+[data-component-id='${id}'] .left {
+    left: 30px;
+    transform: rotate(135deg) translate(0, 50%);
+    -webkit-transform: rotate(135deg) translate(0, 50%);
+}
+
+[data-component-id='${id}'] .nav {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, 0);
+}
+
+[data-component-id='${id}'] .nav button {
+    border-style: none;
+    background: black;
+    padding: 10px;
+    border-radius: 50px;
+    margin: 0 5px;
+    cursor: pointer;
+    outline: 0;
+    transition: all 250ms ease-in-out;
+}
+
+[data-component-id='${id}'] .nav button.active {
+    background: lightgray;
+}
+
+[data-component-id='${id}'] .nav button:hover {
+    background: lightgray;
+}
+
+[data-component-id='${id}'] .slide {
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    margin: 0 auto;
+    position: relative;
+}
+
+[data-component-id='${id}'] .slide .slide-text {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #fff;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+[data-component-id='${id}'] .slide .slide-text h1 {
+    font-size: 30px;
+}
+
+[data-component-id='${id}'] .slide .slide-text h2 {
+    font-size: 24px;
+}

@@ -1,0 +1,38 @@
+[data-component-id='${id}'] {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    float: left;
+    margin: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+[data-component-id='${id}']:hover {
+    opacity: 0.8;
+}
+
+[data-component-id='${id}'] h1 {
+    color: white;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 18px;
+    margin: 0;
+    line-height: 40px;
+}
+
+[data-component-id='${id}'] > div {
+    height: 100%;
+    padding: 10px;
+}
+
+[data-component-id='${id}'] button {
+    padding: 10px 20px;
+    color: #fff;
+    border: 0;
+    background-color: #000;
+    margin-top: 10px;
+    cursor: pointer;
+}

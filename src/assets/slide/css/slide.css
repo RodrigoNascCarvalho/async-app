@@ -1,0 +1,30 @@
+[data-component-id='${id}'] {
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    margin: 0 auto;
+    position: relative;
+}
+
+[data-component-id='${id}'] .slide-text {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+[data-component-id='${id}'] h1, [data-component-id='${id}'] h2 {
+    color: #fff;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+[data-component-id='${id}'] h1 {
+    font-size: 30px;
+}
+
+[data-component-id='${id}'] h2 {
+    font-size: 24px;
+}
