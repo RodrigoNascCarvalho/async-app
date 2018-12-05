@@ -8,10 +8,11 @@ window.AsyncComponents['${name}'] = function(props) {
     window.console.log(`Clicked like crazy on ${props.name}`);
   }
 
-  const style = `background-image:url('${props.imgSrc}')`;
+  const onconnected = () => window.LazyLoad.update();
+  const imgSrc = `url('${props.imgSrc}')`;
 
   return hyperHTML.wire(props)`
-    <div style=${style}>
+    <div class="lazy" onconnected=${onconnected} data-bg=${imgSrc}>
       <h1>${props.name}</h1>
       <button onclick=${handleClick}>${props.greeting}</button>
     </div>

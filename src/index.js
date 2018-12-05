@@ -1,4 +1,9 @@
 const {processAsyncElement} = require('./modules/resource-loader');
+const LazyLoad = require('vanilla-lazyload').default;
+
+window.LazyLoad = new LazyLoad({
+  elements_selector: '.lazy',
+});
 
 const asyncObserver = new MutationObserver((mutations) => {
   const convertNodeListToArray = (nodeList) => [].slice.call(nodeList);

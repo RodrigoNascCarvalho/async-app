@@ -16,7 +16,7 @@ window.AsyncComponents['${name}'] = (function() {
               href=${slideProps.link}
               target="_blank"
               rel="noopener">
-            <img alt="Random Image" src="${slideProps.imgSrc}"/>
+            <img class="lazy" alt="Random Image" data-src="${slideProps.imgSrc}"/>
           <div class="slide-text">
               <h1>${slideProps.title}</h1>
               <h2>${slideProps.subTitle}</h2>
@@ -48,6 +48,7 @@ window.AsyncComponents['${name}'] = (function() {
       this.interval = setInterval(() => {
         this.nextSlide();
       }, 2000);
+      window.LazyLoad.update();
     }
 
     updateSlide(newIndex) {
