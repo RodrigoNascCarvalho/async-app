@@ -1,4 +1,5 @@
-window.AsyncComponents['${name}'] = function(props) {
+// eslint-disable-next-line no-undef
+asyncPage.component('${name}', function(props) {
   const onconnected = () => window.LazyLoad.update();
 
   return hyperHTML.wire(props)`
@@ -13,4 +14,4 @@ window.AsyncComponents['${name}'] = function(props) {
         </div>
        </a>
     `;
-};
+});

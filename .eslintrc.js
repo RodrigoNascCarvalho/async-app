@@ -12,6 +12,7 @@ module.exports = {
     },
     globals: {
         require: false,
-        hyperHTML: false
+        hyperHTML: false,
+        asyncPage: false
     }
 }

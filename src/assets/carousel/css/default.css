@@ -1,4 +1,4 @@
-[data-component-id='${id}'] {
+[data-component-id="${id}"] {
     width: 100%;
     min-height: 130px;
     overflow: hidden;
@@ -13,12 +13,12 @@
     }
 }
 
-[data-component-id='${id}'] .carousel-slide {
+[data-component-id="${id}"] .carousel-slide {
     display: none;
     animation: loadSlide 500ms ease-in-out;
 }
 
-[data-component-id='${id}'] .arrow {
+[data-component-id="${id}"] .arrow {
     top: 50%;
     position: absolute;
     border: solid black;
@@ -31,31 +31,31 @@
     outline: 0;
 }
 
-[data-component-id='${id}'] .arrow:hover {
+[data-component-id="${id}"] .arrow:hover {
     border: solid lightgray;
     border-width: 0 10px 10px 0;
 }
 
-[data-component-id='${id}'] .right {
+[data-component-id="${id}"] .right {
     right: 10px;
     transform: rotate(-45deg) translate(0, -50%);
     -webkit-transform: rotate(-45deg) translate(0, -50%);
 }
 
-[data-component-id='${id}'] .left {
+[data-component-id="${id}"] .left {
     left: 30px;
     transform: rotate(135deg) translate(0, 50%);
     -webkit-transform: rotate(135deg) translate(0, 50%);
 }
 
-[data-component-id='${id}'] .nav {
+[data-component-id="${id}"] .nav {
     position: absolute;
     left: 50%;
     bottom: 10px;
     transform: translate(-50%, 0);
 }
 
-[data-component-id='${id}'] .nav button {
+[data-component-id="${id}"] .nav button {
     border-style: none;
     background: black;
     padding: 10px;
@@ -66,15 +66,15 @@
     transition: all 250ms ease-in-out;
 }
 
-[data-component-id='${id}'] .nav button.active {
+[data-component-id="${id}"] .nav button.active {
     background: lightgray;
 }
 
-[data-component-id='${id}'] .nav button:hover {
+[data-component-id="${id}"] .nav button:hover {
     background: lightgray;
 }
 
-[data-component-id='${id}'] .slide {
+[data-component-id="${id}"] .slide {
     width: 100%;
     overflow: hidden;
     float: left;
@@ -82,7 +82,7 @@
     position: relative;
 }
 
-[data-component-id='${id}'] .slide .slide-text {
+[data-component-id="${id}"] .slide .slide-text {
     position: absolute;
     top: 15px;
     left: 15px;
@@ -94,10 +94,10 @@
         1px 1px 0 #000;
 }
 
-[data-component-id='${id}'] .slide .slide-text h1 {
+[data-component-id="${id}"] .slide .slide-text h1 {
     font-size: 30px;
 }
 
-[data-component-id='${id}'] .slide .slide-text h2 {
+[data-component-id="${id}"] .slide .slide-text h2 {
     font-size: 24px;
 }

@@ -1,5 +1,5 @@
 /* eslint-disable require-jsdoc */
-window.AsyncComponents['${name}'] = (function() {
+asyncPage.component('${name}', (function() {
   const {
     hyper,
   } = hyperHTML;
@@ -58,7 +58,7 @@ window.AsyncComponents['${name}'] = (function() {
 
       clearInterval(this.interval);
       this.onconnected();
-      return this.render();
+      this.render();
     }
 
     nextSlide(event) {
@@ -107,7 +107,7 @@ window.AsyncComponents['${name}'] = (function() {
 
   return function(carouselProps) {
     return hyperHTML.wire(
-        carouselProps,
-        ':carousel')`${ new Carousel(carouselProps) }`;
+        carouselProps)`${ new Carousel(carouselProps) }`;
   };
-}());
+}()));
+

@@ -1,4 +1,4 @@
-window.AsyncComponents['${name}'] = function(props) {
+asyncPage.component('${name}', function(props) {
   /**
    * Handles click
    * @param {Event} event The click event from the DOM
@@ -17,4 +17,4 @@ window.AsyncComponents['${name}'] = function(props) {
       <button onclick=${handleClick}>${props.greeting}</button>
     </div>
   `;
-};
+});

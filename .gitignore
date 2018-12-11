@@ -5,3 +5,7 @@
 .vscode
 .eslintcache
 /dist
+
+.firebase
+.firebaserc
+firebase.json

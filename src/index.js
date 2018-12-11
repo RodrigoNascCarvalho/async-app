@@ -23,6 +23,11 @@ const asyncObserver = new MutationObserver((mutations) => {
 });
 
 window.AsyncComponents = {};
+window.asyncPage = {};
+window.asyncPage.component = (id, definition) => {
+  window.AsyncComponents[id] = definition;
+};
+
 asyncObserver.observe(document.documentElement, {
   childList: true,
   subtree: true,

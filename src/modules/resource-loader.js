@@ -34,7 +34,8 @@ const loadExternalStyle = (element, code) => {
 };
 
 const processResourceIdentifier = (element, content) => {
-  const componentId = generateUUID();
+  const componentId = element.getAttribute('data-component-id') ||
+    generateUUID();
   element.setAttribute('data-component-id', componentId);
 
   return content.replace(/\${id}/g, componentId);
@@ -59,7 +60,7 @@ export const processAsyncElement = (element) => {
             processResourceIdentifier(element, resourceContent))
           .then((treatedContent) =>
             externalResource.handler(element, treatedContent))
-          .catch(window.console.error);
+          .catch((err) => window.console.error(err));
     }
   });
 };
