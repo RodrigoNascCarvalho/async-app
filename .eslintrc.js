@@ -6,7 +6,7 @@ module.exports = {
     env: {
       browser: true
     },
-    extends: ["eslint:recommended", "google"],
+    extends: ["eslint:recommended"],
     rules: {
         semi: 2
     },

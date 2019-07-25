@@ -41,7 +41,7 @@ const processResourceIdentifier = (element, content) => {
   return content.replace(/\${id}/g, componentId);
 };
 
-export const processAsyncElement = (element) => {
+export const processAsyncElement = async (element) => {
   const externalResources = [
     {
       attribute: 'data-script-url',
@@ -51,16 +51,23 @@ export const processAsyncElement = (element) => {
       handler: loadExternalStyle,
     }];
 
-  externalResources.forEach((externalResource) => {
+  const promises = externalResources.map(async (externalResource) => {
     const resourcePath = element.getAttribute(externalResource.attribute);
 
-    if (resourcePath) {
-      getResource(resourcePath)
-          .then((resourceContent) =>
-            processResourceIdentifier(element, resourceContent))
-          .then((treatedContent) =>
-            externalResource.handler(element, treatedContent))
-          .catch((err) => window.console.error(err));
+    try {
+      if (!resourcePath) {
+        return null;
+      }
+
+      const resource = await getResource(resourcePath);
+      const resourceContent = processResourceIdentifier(element, resource);
+      const treatedContent = externalResource.handler(element, resourceContent);
+      return treatedContent;
+    } catch (err) {
+      throw err;
     }
   });
+
+  // eslint-disable-next-line no-undef
+  await Promise.all(promises);
 };

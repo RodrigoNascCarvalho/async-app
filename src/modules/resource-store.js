@@ -1,10 +1,10 @@
 const resourceStore = {};
 
-export const getResource = (resourcePath) => {
+export const getResource = async (resourcePath) => {
   if (resourceStore[resourcePath]) return resourceStore[resourcePath];
 
-  resourceStore[resourcePath] = fetch(resourcePath)
-      .then((response) => response.text());
+  const response = await fetch(resourcePath);
+  resourceStore[resourcePath] = await response.text();
 
   return resourceStore[resourcePath];
 };

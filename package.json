@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx webpack",
+    "start": "npm run build && npx live-server dist/"
   },
-  "author": "",
+  "author": "RodrigoNascCarvalho",
   "license": "ISC",
   "devDependencies": {
     "clean-webpack-plugin": "^1.0.0",
